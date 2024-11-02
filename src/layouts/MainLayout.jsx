@@ -7,7 +7,9 @@ const MainLayout = () => {
     return (
         <div>
             {/* Navbar */}
+            <div className="h-16">
             <Navbar></Navbar>
+            </div>
 
 
 

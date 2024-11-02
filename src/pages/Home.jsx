@@ -1,8 +1,12 @@
+import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 import Heading from "../components/Heading/Heading";
+import Categories from "../components/Categories/Categories";
 
 
 const Home = () => {
+    const categories = useLoaderData();
+    console.log(categories)
     return (
         <div>
             {/* Banner */}
@@ -13,8 +17,15 @@ const Home = () => {
                 subtitle={"Choose your desired coffee category to browse through specific coffees that fit in your taste"}>
 
             </Heading>
+
+            
             {/* Categories tab section  */}
+            <Categories categories={categories}></Categories>
+
+            
+            
             {/* Dynamic Nested component */}
+            <Outlet></Outlet>
         </div>
     );
 };
